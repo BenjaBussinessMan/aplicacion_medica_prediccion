@@ -21,9 +21,9 @@ with col6:
 
 #modelos 
 
-diabetes_model = pickle.load(open('saved models/diabetes_model.sav', 'rb'))
-heart_disease_model = pickle.load(open('saved models/heart_disease_model.sav', 'rb'))
-parkinsons_model = pickle.load(open('saved models/parkinsons_model.sav', 'rb'))
+diabetes_model = pickle.load(open('modelos/diabetes_model.sav', 'rb'))
+heart_disease_model = pickle.load(open('modelos/heart_disease_model.sav', 'rb'))
+parkinsons_model = pickle.load(open('modelos/parkinsons_model.sav', 'rb'))
 
 
 st.title('Herramienta de Análisis Médico')
