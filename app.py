@@ -6,13 +6,12 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-from streamlit_extras.app_logo import add_logo
-def logo():
-    add_logo("logo.jpg", height=100)
+#from streamlit_extras.app_logo import add_logo
+#def logo():add_logo("logo.jpg", height=100)
 
 
-logo_url = "logo.png"
-st.sidebar.image(logo_url)
+#logo_url = "logo.png"
+#st.sidebar.image(logo_url)
 
 
 
