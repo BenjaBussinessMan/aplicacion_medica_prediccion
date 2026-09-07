@@ -17,4 +17,4 @@ A web application designed for disease prediction using machine learning techniq
 - Parkinson's disease: https://www.kaggle.com/datasets/debasisdotcom/parkinson-disease-detection
 
 ## Demo
-https://medipredict-kjm2jeytishbudabpwdr9v.streamlit.app/
+https://aplicacionmedicaprediccion-pbzwiyz6l9q8bl4f73qruu.streamlit.app/
