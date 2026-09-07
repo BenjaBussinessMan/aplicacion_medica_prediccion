@@ -6,11 +6,6 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-from streamlit_extras.app_logo import add_logo
-
-def logo():
-    add_logo("logo.jpg", height=100)
-
 logo_url = "logo.png"
 st.sidebar.image(logo_url)
 
@@ -80,8 +75,9 @@ if (selected == 'Predicción de Diabetes'):
 
     
     if st.button('Resultado de prueba de diabetes'):
-        diab_prediction = diabetes_model.predict([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
-        
+        entradas = [Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]
+        diab_prediction = diabetes_model.predict([[float(x) for x in entradas]])
+
         if (diab_prediction[0] == 1):
           diab_diagnosis = 'La persona es diabetica'
         else:
@@ -145,8 +141,9 @@ if (selected == 'Predicción de enfermedad cardíaca'):
 
     
     if st.button('Resultado de enfermedad cardiaca'):
-        heart_prediction = heart_disease_model.predict([[age, sex, cp, trestbps, chol, fbs, restecg,thalach,exang,oldpeak,slope,ca,thal]])                          
-        
+        entradas = [age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]
+        heart_prediction = heart_disease_model.predict([[float(x) for x in entradas]])
+
         if (heart_prediction[0] == 1):
           heart_diagnosis = 'La persona tiene una enfermedad cardiaca'
         else:
@@ -233,8 +230,9 @@ if (selected == "Predicción de la enfermedad de Parkinson"):
     parkinsons_diagnosis = ''
     
     if st.button("Resultado de la prueba de Parkinson"):
-        parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE]])                          
-        
+        entradas = [fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ, DDP, Shimmer, Shimmer_dB, APQ3, APQ5, APQ, DDA, NHR, HNR, RPDE, DFA, spread1, spread2, D2, PPE]
+        parkinsons_prediction = parkinsons_model.predict([[float(x) for x in entradas]])
+
         if (parkinsons_prediction[0] == 1):
           parkinsons_diagnosis = "La persona tiene la enfermedad de Parkinson"
         else:
